@@ -3,25 +3,21 @@ import { Separator } from "./components/ui/separator";
 import { Textarea } from "./components/ui/textarea";
 import { Label } from "./components/ui/label";
 
-import { FileVideo, Github, Upload, Wand2 } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./components/ui/select";
+import {  Github, Wand2 } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select";
 import { Slider } from "./components/ui/slider";
+import { VideoInputForm } from "./components/video-input-form";
+import { PromptSelect } from "./components/prompt-select";
 
 export function App() {
   return (
     <div className="min-h-screen flex flex-col ">
       <div className="px-6 py-3 flex items-center justify-between border-b">
-        <h1 className="text-xl font-bold">upload.ai</h1>
+        <code className="text-xl font-bold">upload.ai</code>
 
         <div className="flex items-center gap-3">
           <span className="text-small text-muted-foreground">
-            Desenvolvido com 💚 no NLW
+            Desenvolvido com 💚 no NLW 🚀
           </span>
 
           <Separator orientation="vertical" className="h-6" />
@@ -49,61 +45,19 @@ export function App() {
           <p className="text-small text-muted-foreground">
             Lembre-se: você pode utilizar a variável{" "}
             <code className="text-green-400">{"{transcription}"}</code> no seu
-            prompt para adicionar o conteúdo da transcrição do video selecionado
+            prompt para adicionar o conteúdo da transcrição do video selecionado.
           </p>
         </div>
+
         <aside className="w-80 space-y-4">
-          <form className="space-y-6">
-            <label
-              htmlFor="video"
-              className="border flex rounded-md aspect-video cursor-pointer border-dashed text-small flex-col gap-2 items-center justify-center text-muted-foreground hover:bg-primary/20"
-            >
-              <FileVideo className="w-4 h-4" />
-              Selecione um video
-            </label>
-
-            <input
-              type="file"
-              id="video"
-              accept="video/mp4"
-              className="sr-only"
-            />
-
-            <Separator />
-
-            <div className="space-y-2">
-              <Label htmlFor="transcription_prompt">
-                Prompt de transcrição
-              </Label>
-              <Textarea
-                id="transcription_prompt"
-                className="h-20 leading-relaxed resize-none"
-                placeholder="Inclua palavras chave mencionadas no video separadas por vírgula(,)"
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              Carregar Video
-              <Upload className="w-4 h-4 ml-2" />
-            </Button>
-          </form>
+        <VideoInputForm/>
 
           <Separator />
 
           <form className="space-y-4">
             <div className="space-y-2">
               <Label>Prompt</Label>
-              <Select>
-                <SelectTrigger>
-                  <SelectValue placeholder="selecione um prompt..." />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="title"> Titulo do Youtube </SelectItem>
-                  <SelectItem value="description">
-                    {" "}
-                    Descrição do Youtube{" "}
-                  </SelectItem>
-                </SelectContent>
-              </Select>
+                <PromptSelect/>
               <span className="block text-xs text-muted-foreground italic">
                 Você poderá customizar essa opção em breve
               </span>
