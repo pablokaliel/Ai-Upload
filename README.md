@@ -1,11 +1,11 @@
 <h1 align="center"> Upload.AI | NLW - IA</h1>
 <br>
 
-##📖 Descrição
+## 📖 Descrição
 
 O projeto "upload.ai" foi desenvolvido durante a NLW - IA promovida pela Rocketseat. Com essa aplicação podemos fazer upload de vídeos e obter transcrições deles. Além disso, podemos utilizar a IA para obter respostas relacionadas ao vídeo, criar resumos, quizzes, gerar títulos e descrições para o YouTube, e muito mais.
 
-##🎨 Visualização
+## 🎨 Visualização
 
 <p align="center">
   <img src="https://github.com/pablokaliel/boracodar35/assets/104238801/a16fa009-4ef5-4a54-a7ac-cdec23a36a31" width="100%">
