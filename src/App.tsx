@@ -45,8 +45,14 @@ export function App() {
           <Separator orientation="vertical" className="h-6" />
 
           <Button variant="outline">
-            <Github className="w-4 h-4 mr-2" />
-            Github
+            <a
+              href="https://github.com/pablokaliel/nlw-rocketseat"
+              target="_blank"
+              className="flex items-center"
+            >
+              <Github className="w-4 h-4 mr-2" />
+              Github
+            </a>
           </Button>
         </div>
       </div>
@@ -122,7 +128,7 @@ export function App() {
 
               <span className="block text-xs text-muted-foreground italic leading-relaxed">
                 Valores mas altos tendem a deixar o resultado mais criativo e
-                com possiveis erros.
+                com possíveis erros.
               </span>
             </div>
 
