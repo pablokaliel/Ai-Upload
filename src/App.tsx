@@ -38,7 +38,7 @@ export function App() {
         <code className="text-xl font-bold">upload.ai</code>
 
         <div className="flex items-center gap-3">
-          <span className="text-small text-muted-foreground">
+          <span className="text-small text-muted-foreground max-md:hidden">
             Desenvolvido com 💚 no NLW 🚀
           </span>
 
@@ -73,16 +73,20 @@ export function App() {
               value={completion}
             />
           </div>
-          <p className="text-small text-muted-foreground">
+          <p className="text-small text-muted-foreground text-center">
             Lembre-se: você pode utilizar a variável{" "}
             <code className="text-green-400">{"{transcription}"}</code> no seu
             prompt para adicionar o conteúdo da transcrição do video
             selecionado.
           </p>
+          <p className="text-small text-muted-foreground">
+            <code className="text-green-400">OBS:</code> O aplicativo web está
+            com funcionalidades indisponíveis devido à ausência de conexão com o
+            back-end.
+          </p>
         </div>
 
-        <aside className="w-80 space-y-4">
-
+        <aside className="w-80 space-y-4 max-md:w-1/2">
           <VideoInputForm onVideoUploaded={setVideoId} />
 
           <Separator />
