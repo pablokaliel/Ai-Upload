@@ -9,6 +9,7 @@ import { Slider } from "./components/ui/slider";
 import { VideoInputForm } from "./components/video-input-form";
 import { PromptSelect } from "./components/prompt-select";
 import { useState } from "react";
+import TypeText from "./components/typeText";
 
 export function App() {
   const [temperature, setTemperature] = useState(0.5);
@@ -35,7 +36,7 @@ export function App() {
   return (
     <div className="min-h-screen flex flex-col ">
       <div className="px-6 py-3 flex items-center justify-between border-b">
-        <code className="text-xl font-bold">upload.ai</code>
+        <TypeText/>
 
         <div className="flex items-center gap-3">
           <span className="text-small text-muted-foreground max-md:hidden">
