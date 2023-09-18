@@ -73,7 +73,7 @@ export function App() {
               value={completion}
             />
           </div>
-          <p className="text-small text-muted-foreground text-center">
+          <p className="text-small text-muted-foreground max-md:text-center">
             Lembre-se: você pode utilizar a variável{" "}
             <code className="text-green-400">{"{transcription}"}</code> no seu
             prompt para adicionar o conteúdo da transcrição do video
