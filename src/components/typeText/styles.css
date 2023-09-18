@@ -1,0 +1,28 @@
+.line {
+  border-right: 2px solid #f9f9f9;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation: blinckCursor 600ms steps(40) infinite normal,
+    typing 4s steps(40) 1s infinite normal both;
+}
+
+@keyframes blinckCursor {
+  from {
+    border-right-color: fff;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  0%,10%,100% {
+    width: 0;
+  }
+  70%,90% {
+    width: 5.1em;
+  }
+}
